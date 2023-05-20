@@ -1,0 +1,50 @@
+.draw {
+    background: white;
+}
+
+#container {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    max-width: 500px;
+    max-height: 500px;
+    background-color: blue;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.empty {
+   border-style: dotted;
+   padding: 10px;
+   display: flex;
+}
+
+.main {
+display: flex;
+
+}
+
+.cell {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.column {
+    border-style: dotted;
+    padding: 10px;
+
+}
+
+body {
+    background: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+h1 {
+    color: magenta;
+}
