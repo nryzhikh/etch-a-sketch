@@ -1,5 +1,5 @@
 .draw {
-    background: white;
+    background-color: white;
 }
 
 #container {
@@ -10,6 +10,7 @@
     max-height: 500px;
     background-color: blue;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    --color: red;
 }
 
 .empty {

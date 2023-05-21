@@ -3,6 +3,7 @@ const btn = document.querySelector('#btn');
 const clear = document.querySelector('#clear');
 let size = 16;
 createGrid(size);
+const randomColor = Math.floor(Math.random()*16777215).toString(16);
 
 /* function createGrid (size) {
     for (i = 0; i < (size * size); i++) {
@@ -39,12 +40,22 @@ function createGrid (size) {
     for (i = 0; i < size * size; i++) {
         const cell = document.createElement('div');
         cell.classList.add('cell');
+        let opacity = 0;
         cell.addEventListener("mousedown", () => {
-            cell.classList.add('draw');
+            let randomColor =  Math.floor(Math.random()*16777215).toString(16);
+            let opa1 = opacity + 0.1;
+            cell.style.backgroundColor = "#" + randomColor;
+            cell.style.opacity = opa1;
+            opacity = opa1;
         });
         cell.addEventListener("mouseover", () => {
-            if (mouseDown)
-            cell.classList.add('draw');
+            if (mouseDown) {
+            let randomColor =  Math.floor(Math.random()*16777215).toString(16);
+            let opa1 = opacity + 0.1;
+            cell.style.backgroundColor = "#" + randomColor;
+            cell.style.opacity = opa1;
+            opacity = opa1;
+            };
         });
         container.appendChild(cell);
     };
@@ -52,9 +63,9 @@ function createGrid (size) {
 };
 
 clear.addEventListener('click', () => {
-    filledItems = document.querySelectorAll('.draw');
+    filledItems = document.querySelectorAll('.cell');
     for (let i = 0; i < filledItems.length; i++) {
-        filledItems[i].classList.remove('draw');
+        filledItems[i].style.backgroundColor = 'blue';
       }
 });
 
